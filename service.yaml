@@ -7,6 +7,7 @@ spec:
     app: rock-paper-scissors # The label to select the Pods for this service
   ports:
     - protocol: TCP
-      port: 80 # The external port (accessible to outside world)
+      port: 80 # The external port (accessible to the outside world)
       targetPort: 3000 # The internal port where the app is running inside the container
-  type: LoadBalancer # You can change this to NodePort if LoadBalancer is not supported
+      nodePort: 30080 # The external port on your node (change this to an available port)
+  type: NodePort # Changed this to NodePort for local access

@@ -15,5 +15,6 @@ spec:
       containers:
         - name: rock-paper-scissors # Name of the container
           image: nvmseff/rock-paper-scissors:latest # name of the image
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000 # Port your app is listening on inside the container
